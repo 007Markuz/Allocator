@@ -1,0 +1,10 @@
+com/example/demo/controller/CarController.java
+ com.example.demo.controller.CarController
+com/example/demo/AllocatorApplication.java
+ com.example.demo.AllocatorApplication
+com/example/demo/service/VehicleService.java
+ com.example.demo.service.VehicleService
+com/example/demo/domain/Car.java
+ com.example.demo.domain.Car
+com/example/demo/service/CarService.java
+ com.example.demo.service.CarService
