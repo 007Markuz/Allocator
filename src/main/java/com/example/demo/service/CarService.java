@@ -1,20 +1,29 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Car;
+import com.example.demo.repositori.CarRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CarService implements VehicleService{
 
-  public Car getById(String id){
-    return new Car();
+  private CarRepository carRepository;
+
+  public CarService(CarRepository carRepository) {
+    this.carRepository = carRepository;
   }
 
-  public List<Car> get(){
-    return List.of(new Car());
+  public Optional<Car> getById(Integer id){
+    return this.carRepository.findById(id);
+  }
+
+  public List<Car> getAll(){
+    return this.carRepository.findAll();
   }
   public boolean save(Car car){
+    this.carRepository.save(car);
     return true;
   }
 
