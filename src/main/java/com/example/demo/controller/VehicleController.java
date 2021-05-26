@@ -27,13 +27,15 @@ public class VehicleController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity carById(@PathVariable Integer id){
-    Optional<Vehicle> car = this.service.getById(id);
-    if(car.isEmpty()){
+  public ResponseEntity carById(@PathVariable int id){
+    Optional<Vehicle> vehicle = this.service.getById(id);
+    if(vehicle.isEmpty()){
       return ResponseEntity.notFound().build();
     }
-    return ResponseEntity.ok(car.get()) ;
+    return ResponseEntity.ok(vehicle.get()) ;
   }
+
+
 
   @PostMapping("/save")
   public ResponseEntity car(@RequestBody Vehicle vehicle){

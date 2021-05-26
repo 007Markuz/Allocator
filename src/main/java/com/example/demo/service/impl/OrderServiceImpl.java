@@ -29,6 +29,7 @@ public class OrderServiceImpl implements OrderService {
         .driver(
             Driver
                 .builder()
+                .id("1")
                 .lastName("")
                 .name("")
                 .license(TypeVehicle.CAR)
@@ -38,13 +39,15 @@ public class OrderServiceImpl implements OrderService {
         .origin("")
         .vehicle(Vehicle
             .builder()
+            .id(1)
             .model("")
-            .Colour("")
+            .colour("")
             .maximumLoad(0)
             .build()
         )
         .packet(Packet
             .builder()
+            .id("1")
             .weight(0)
             .isFragile(false)
             .build()

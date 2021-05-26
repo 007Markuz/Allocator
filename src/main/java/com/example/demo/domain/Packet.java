@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Packet {
+  String id;
   int weight;
   boolean isFragile;
 }

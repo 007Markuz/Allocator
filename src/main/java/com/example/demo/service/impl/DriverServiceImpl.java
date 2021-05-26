@@ -28,6 +28,7 @@ public class DriverServiceImpl implements DriverService {
   private Driver getDummy(){
     return Driver
         .builder()
+        .id("1")
         .lastName("")
         .name("")
         .license(TypeVehicle.CAR)

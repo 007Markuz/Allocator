@@ -1,9 +1,7 @@
-package com.example.demo.repositori;
+package com.example.demo.repository;
 
-import com.example.demo.domain.Car;
 import com.example.demo.domain.Vehicle;
 import java.util.List;
-import javax.persistence.Id;
 import org.springframework.data.repository.CrudRepository;
 
 
