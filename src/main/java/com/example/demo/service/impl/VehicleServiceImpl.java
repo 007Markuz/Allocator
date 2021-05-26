@@ -20,6 +20,6 @@ public class VehicleServiceImpl implements com.example.demo.service.VehicleServi
   }
 
   private Vehicle getVehicleDummi(){
-    return Vehicle.builder().maximumLoad(100).Colour("red").model("model") .build();
+    return Vehicle.builder().id("1").maximumLoad(100).Colour("red").model("model") .build();
   }
 }

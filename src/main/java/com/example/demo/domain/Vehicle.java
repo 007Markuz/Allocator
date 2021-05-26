@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Vehicle {
-
+  String id;
   String model;
   String Colour;
   int maximumLoad;
