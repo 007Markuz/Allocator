@@ -1,17 +1,17 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.Car;
+import com.example.demo.domain.Vehicle;
 import java.util.List;
 import java.util.Optional;
 
 public interface VehicleService {
 
 
-  public List<Car> getAll();
+  public List<Vehicle> getAll();
 
-  Optional<Car> getById(Integer id);
+  public Optional<Vehicle> getById(Integer id);
 
-  public boolean save(Car car);
+  public boolean save(Vehicle vehicle);
 
 
 }
