@@ -2,11 +2,9 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.Driver;
 import com.example.demo.service.DriverService;
-import com.sun.istack.NotNull;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
