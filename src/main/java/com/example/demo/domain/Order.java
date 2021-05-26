@@ -7,10 +7,10 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class Car {
-
-  String model;
-  String Colour;
-  String maximumLoad;
-
+public class Order {
+  Driver driver;
+  String origin;
+  String destination;
+  Vehicle vehicle;
+  Packet packet;
 }
