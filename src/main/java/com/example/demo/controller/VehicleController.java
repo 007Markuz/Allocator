@@ -27,7 +27,7 @@ public class VehicleController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity carById(@PathVariable Integer id){
+  public ResponseEntity carById(@PathVariable String id){
     Optional<Vehicle> car = this.service.getById(id);
     if(car.isEmpty()){
       return ResponseEntity.notFound().build();

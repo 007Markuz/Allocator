@@ -9,7 +9,7 @@ public interface VehicleService {
 
   public List<Vehicle> getAll();
 
-  public Optional<Vehicle> getById(Integer id);
+  public Optional<Vehicle> getById(String id);
 
   public boolean save(Vehicle vehicle);
 

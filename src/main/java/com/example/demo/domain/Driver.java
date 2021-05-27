@@ -11,5 +11,6 @@ public class Driver {
   String id;
   String name;
   String lastName;
+  int age;
   TypeVehicle license;
 }

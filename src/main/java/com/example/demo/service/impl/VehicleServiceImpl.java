@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class VehicleServiceImpl implements com.example.demo.service.VehicleService {
 
-  public Optional<Vehicle> getById(Integer id){
+  public Optional<Vehicle> getById(String id){
     return Optional.of(this.getVehicleDummi());
   }
 
