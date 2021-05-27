@@ -29,7 +29,7 @@ public class OrderServiceImpl implements OrderService {
         .driver(
             Driver
                 .builder()
-                .id("1")
+                .id(1)
                 .lastName("")
                 .name("")
                 .license(TypeVehicle.CAR)

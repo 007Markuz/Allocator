@@ -11,7 +11,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-@Entity
+@Entity()
 public class Vehicle {
   @Id
   @GeneratedValue
