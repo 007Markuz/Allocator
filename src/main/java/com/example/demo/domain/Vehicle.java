@@ -12,5 +12,6 @@ public class Vehicle {
   String model;
   String Colour;
   int maximumLoad;
+  int year;
 
 }

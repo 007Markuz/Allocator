@@ -11,4 +11,5 @@ public class Packet {
   String id;
   int weight;
   boolean isFragile;
+  int cubicCentimeter;
 }
