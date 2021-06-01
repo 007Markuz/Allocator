@@ -28,9 +28,15 @@ public class DriverServiceImpl implements DriverService {
 
   public List<Driver> getTruckNewDriver(){
     List<Driver> list =this.getListDummy();
+
     List<Driver> newList =new ArrayList<>();
+
     for ( Driver element: list ) {
-      if(element.getAge() > 25 && element.getAge() < 55 && element.getLicense().equals(TypeVehicle.CAR))
+      if(
+          element.getAge() > 25 &&
+          element.getAge() < 55 &&
+          element.getLicense().equals(TypeVehicle.CAR)
+      )
       newList.add(element);
     }
     return newList;
