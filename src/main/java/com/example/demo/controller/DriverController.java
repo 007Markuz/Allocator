@@ -41,4 +41,9 @@ public class DriverController {
     this.service.save(driver);
     return ResponseEntity.noContent().build();
   }
+
+  @GetMapping("/newTruck")
+  public List<Driver> newTruck(){
+    return this.service.getTruckNewDriver();
+  }
 }

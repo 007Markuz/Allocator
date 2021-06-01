@@ -11,4 +11,6 @@ public interface DriverService {
   public Optional<Driver> getById(Integer id);
 
   public boolean save(Driver driver);
+
+  public List<Driver> getTruckNewDriver();
 }
