@@ -6,6 +6,7 @@ import com.example.demo.service.DriverService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,12 +29,12 @@ public class DriverServiceImpl implements DriverService {
 
   public List<Driver> getTruckNewDriver(){
     List<Driver> list =this.getListDummy();
-    List<Driver> newList =new ArrayList<>();
-    for ( Driver element: list ) {
-      if(element.getAge() > 25 && element.getAge() < 55 && element.getLicense().equals(TypeVehicle.CAR))
-      newList.add(element);
-    }
-    return newList;
+
+    return list.stream().filter(element -> (
+        element.getAge() > 25 &&
+            element.getAge() < 55 &&
+            element.getLicense().equals(TypeVehicle.CAR)
+        )).collect(Collectors.toList());
   }
 
   private Driver getDummy(int age, TypeVehicle license){
