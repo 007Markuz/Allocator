@@ -1,7 +1,9 @@
 package com.example.demo.domain;
 
 public enum TypeVehicle {
-  CAR("car",1),TRUCK("truck",2),MOTORCYCLE("motorcycle",3);
+  CAR("car",1),
+  TRUCK("truck",2),
+  MOTORCYCLE("motorcycle",3);
 
   String name;
   int id;

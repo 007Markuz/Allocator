@@ -31,7 +31,7 @@ public class DriverServiceImpl implements DriverService {
   public boolean save(Driver driver) {
 
 
-    this.repository.save(driver.getName(),driver.getLastName(),driver.getLicense().getId());
+    this.repository.saveDriver(driver.getName(),driver.getLastName(),driver.getLicense().getId());
     return false;
   }
 

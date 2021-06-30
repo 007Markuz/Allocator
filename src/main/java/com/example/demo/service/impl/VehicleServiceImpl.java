@@ -25,6 +25,8 @@ public class VehicleServiceImpl implements VehicleService {
   public List<Vehicle> getAll(){
     return this.repository.findAll();
   }
+
+
   public boolean save(Vehicle vehicle){
     this.repository.save(vehicle);
     return true;
