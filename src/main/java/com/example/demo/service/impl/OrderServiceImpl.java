@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
             .builder()
             .id("1")
             .model("")
-            .Colour("")
+            .colour("")
             .maximumLoad(0)
             .build()
         )

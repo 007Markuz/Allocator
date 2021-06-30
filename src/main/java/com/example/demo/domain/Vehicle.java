@@ -10,7 +10,7 @@ import lombok.Setter;
 public class Vehicle {
   String id;
   String model;
-  String Colour;
+  String colour;
   int maximumLoad;
   int year;
 

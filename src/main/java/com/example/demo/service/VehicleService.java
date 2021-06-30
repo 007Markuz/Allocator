@@ -13,5 +13,5 @@ public interface VehicleService {
 
   public boolean save(Vehicle vehicle);
 
-
+  public List<Vehicle> getRedHevy();
 }

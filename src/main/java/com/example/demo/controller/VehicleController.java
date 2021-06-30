@@ -40,4 +40,10 @@ public class VehicleController {
     this.service.save(vehicle);
     return ResponseEntity.noContent().build();
   }
+
+  @GetMapping("/redHevy")
+  public List<Vehicle> redHevy(){
+    return this.service.getRedHevy();
+  }
+
 }

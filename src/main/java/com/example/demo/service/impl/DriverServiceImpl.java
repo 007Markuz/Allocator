@@ -30,12 +30,15 @@ public class DriverServiceImpl implements DriverService {
   public List<Driver> getTruckNewDriver(){
     List<Driver> list =this.getListDummy();
 
-    return list.stream().filter(element -> (
-        element.getAge() > 25 &&
-            element.getAge() < 55 &&
-            element.getLicense().equals(TypeVehicle.CAR)
-        )).collect(Collectors.toList());
+    return list.stream()
+        .filter(element -> (
+            element.getAge() > 25 &&
+                element.getAge() < 55 &&
+                element.getLicense().equals(TypeVehicle.CAR)
+        ))
+        .collect(Collectors.toList());
   }
+
 
   private Driver getDummy(int age, TypeVehicle license){
     return Driver
@@ -58,4 +61,41 @@ public class DriverServiceImpl implements DriverService {
         this.getDummy(60,TypeVehicle.TRUCK)
     );
   }
+
+  public String getAllName(){
+    List<Driver> list =this.getListDummy();
+
+    return list.stream()
+        .map(line -> line.getName() + ", ")
+        .collect(Collectors.joining());
+  }
+
+  public List<Driver> getTwo(){
+    return (List<Driver>) getListDummy().stream().limit(2);
+  }
+
+
+  
+  public List<Driver> getNewDriver(int min,int max,TypeVehicle type){
+    List<Driver> list =this.getListDummy();
+
+    List<Driver> newList =new ArrayList<>();
+
+    for ( Driver element: list ) {
+      if(
+          element.getAge() > min &&
+              element.getAge() < max &&
+              element.getLicense().equals(type)
+      )
+        newList.add(element);
+    }
+    return newList;
+  }
+
+
+
+
+
+
+
 }
