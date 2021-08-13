@@ -41,4 +41,10 @@ public class DriverController {
     this.service.save(driver);
     return ResponseEntity.noContent().build();
   }
+
+  @GetMapping("/filter")
+  public List<Driver> filter(){
+    return this.service.getAllFilter();
+  }
+
 }

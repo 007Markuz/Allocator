@@ -7,6 +7,7 @@ import com.example.demo.repository.VehicleRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -17,7 +18,7 @@ class VehicleServiceImplTest {
   @InjectMocks
   VehicleServiceImpl vehicleService;
 
-  @Spy
+  @Mock
   private VehicleRepository repository;
 
   @Test
@@ -38,12 +39,11 @@ class VehicleServiceImplTest {
   }
 
   @Test
-
   void saveError() {
 
     Vehicle element = Vehicle.builder().build();
-    Mockito.when(repository.save(element)).thenThrow(new IllegalArgumentException("error"));
 
+    Mockito.when(repository.save(element)).thenThrow(new IllegalArgumentException("error"));
 
     assertThrows(
         IllegalArgumentException.class,

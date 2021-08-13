@@ -1,4 +1,6 @@
 com/example/demo/AllocatorApplicationTests.java
  com.example.demo.AllocatorApplicationTests
+com/example/demo/service/impl/DriverServiceImplTest.java
+ com.example.demo.service.impl.DriverServiceImplTest
 com/example/demo/service/impl/VehicleServiceImplTest.java
  com.example.demo.service.impl.VehicleServiceImplTest

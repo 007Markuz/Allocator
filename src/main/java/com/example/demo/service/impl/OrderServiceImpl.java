@@ -13,16 +13,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl implements OrderService {
   public Optional<Order> getById(Integer id){
-    return Optional.of(this.getOrderDummy());
+    return Optional.empty();
   }
 
   public List<Order> getAll(){
-    return List.of(this.getOrderDummy());
+    return List.of();
   }
   public boolean save(Order order){
     return true;
   }
 
+  /*
   private Order getOrderDummy(){
     return Order
         .builder()
@@ -53,5 +54,5 @@ public class OrderServiceImpl implements OrderService {
             .build()
         )
         .build();
-  }
+  }*/
 }

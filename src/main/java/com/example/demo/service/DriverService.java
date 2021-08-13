@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface DriverService {
+
+
+  public List<Driver> getAllFilter();
   public List<Driver> getAll();
 
   public Optional<Driver> getById(Integer id);
